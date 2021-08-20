@@ -1,0 +1,92 @@
+.footer {
+    $stacking: 'md';
+  
+    margin-top: 56px;
+  
+    color: get-color(footer-text);
+    text-align: center;
+    font-size: font-size(14px);
+  
+    @include media-query(sm) {
+      margin-top: 90px;
+      text-align: left;
+    }
+  
+    &__inner {
+      border-top: $divider-border;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  
+      @include media-query(sm) {
+        align-items: center;
+        flex-direction: row;
+      }
+  
+      &--socials {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+  
+      &--menu {
+        @include media-query(sm) {
+          justify-content: flex-end;
+        }
+      }
+    }
+  
+    &__list-item {
+      flex-shrink: 0;
+  
+      @include media-query(sm) {
+        margin-left: 32px;
+      }
+  
+      &--social {
+        @include media-query(sm) {
+          margin-left: 8px;
+        }
+      }
+    }
+  
+    &__socials {
+      @include media-query(sm) {
+        margin-left: -16px;
+      }
+    }
+  
+    &__social-link {
+      display: block;
+      padding: 12px;
+  
+      @include media-query(sm) {
+        padding: 16px;
+      }
+  
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  
+    &__menu-link {
+      display: block;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  
+    // Keeping socials.liquid contextless (styling without footer BEM element)
+    a {
+      color: get-color(footer-link);
+  
+      &:hover {
+        color: get-color(footer-link-hover);
+      }
+    }
+  }

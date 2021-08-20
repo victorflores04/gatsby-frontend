@@ -1,0 +1,225 @@
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// Core Tools
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+@import './tools/px-to-rem';
+@import './tools/font-size';
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// Variables
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Breakpoints/layout
+$breakpoints: (
+  sm: 640px,
+  md: 1024px,
+  lg: 1440px,
+);
+
+$container-width: 1400px;
+$container-outer-width: 1800px;
+
+$gutter: 16px;
+$gutter-sm: 32px;
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// Typography
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+$font-family-base: arial;
+$font-family-heading: arial;
+
+$font-weight-base: arial;
+$font-weight-base-bold: arial;
+$font-weight-heading: arial;
+
+$font-style-base: arial;
+$font-style-heading: arial;
+
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+$line-height-high: 1.8;
+
+$text-transform-base:lowercase;
+$text-transform-heading:lowercase;
+
+$letter-spacing-heading: normal;
+
+$font-size-base: font-size(16px);
+$font-size-small: font-size(14px);
+$font-size-medium: font-size(18px);
+
+$font-size-headings: (
+  h1: 2.5rem,
+  h2: 2rem,
+  h3: 1.5rem,
+  h4: 1.25rem,
+  h5: 1rem,
+  h6: 0.875rem,
+);
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// Colors
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+$color-primary: red;
+$color-background: red;
+
+$color-on-primary: red;
+$color-on-background:red ;
+
+$color-input: $color-on-background;
+
+$color-error: #c52f40;
+
+$colors: (
+  primary: $color-primary,
+  background: $color-background,
+  background-pale: rgba($color-on-background, .05),
+  on-primary: $color-on-primary,
+  on-background: $color-on-background,
+  text: $color-on-background,
+  text-pale: rgba($color-on-background, .6),
+  link: $color-primary,
+  link-hover: rgba($color-primary, .8),
+  white: #fff,
+  black: #000,
+  error: $color-error,
+  heading: $color-on-background,
+  header-background: rgba(0,0,0,0),
+  header-link: $color-on-background,
+  header-link-hover: rgba($color-on-background, .8),
+  mobile-menu-link: $color-on-background,
+  mobile-menu-link-hover: rgba($color-on-background, .8),
+  footer-text: $color-on-background,
+  footer-link: $color-on-background,
+  footer-link-hover: rgba($color-on-background, .8),
+  divider: rgba($color-on-background, .1),
+  image-background: $color-background,
+  image-badge-text: $color-on-background,
+  image-badge-background: rgba($color-background, .9),
+  input-text: $color-input,
+  input-background: rgba(0,0,0,0),
+  input-border: rgba($color-input, .13),
+  input-border-hover: rgba($color-input, .13),
+  input-border-focus: rgba($color-input, .13),
+  input-disabled-text: rgba($color-input, .4),
+  input-disabled-background: rgba($color-input, .02),
+  input-label: $color-input,
+  input-radio-background: rgba($color-input, .04),
+  input-radio-border-selected: $color-on-background,
+  input-radio-background-selected: rgba($color-input, .2),
+  select-option: $color-background,
+  modal-background: $color-background,
+  button-primary-text: $color-on-primary,
+  button-primary-background: $color-primary,
+  button-outline: $color-on-background,
+  button-disabled-text: rgba($color-on-background, .3),
+  button-disabled-background: rgba($color-on-background, .03),
+);
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// Other
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Header
+$header-height: 100px;
+$header-height-sm: 120px;
+
+// Background clipping
+$clip-size: 120px;
+
+// Transition
+$transition-time: 200ms;
+$transition-base: $transition-time;
+$transition-all: all 200ms;
+
+// Logo
+$logo-max-width: 300px;
+
+// Images
+$img-border-radius: 20px;
+$img-ratio-padding: 133.33%;
+//$img-ratio-padding: 125%;
+
+$gallery-img-ratio-padding: $img-ratio-padding;
+
+// Buttons
+$button-border-radius: 20px;
+
+// Divider
+$divider-size: 1px;
+$divider-style: solid;
+$divider-border: $divider-size $divider-style map-get($colors, 'divider');
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// Imports
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Tools
+@import './tools/autofill-fix';
+@import './tools/get-breakpoint';
+@import './tools/get-color';
+@import './tools/media-query';
+
+// Core
+@import './core/generic';
+@import './core/typography';
+
+// Layout
+@import './layout/container';
+@import './layout/grid';
+@import './layout/list';
+@import './layout/wrapper';
+
+// Components
+@import './components/accordion';
+@import './components/announcement-bar';
+@import './components/background-mark';
+@import './components/body';
+@import './components/breadcrumbs';
+@import './components/button';
+@import './components/collection-template';
+@import './components/divider';
+@import './components/donations';
+@import './components/drawer';
+@import './components/footer';
+@import './components/form';
+@import './components/gallery';
+@import './components/gallery-thumbs';
+@import './components/header';
+@import './components/hero';
+@import './components/html-formatter';
+@import './components/ie11';
+@import './components/image';
+@import './components/inline-image';
+@import './components/main';
+@import './components/mobile-menu';
+@import './components/modal';
+@import './components/newsletter';
+@import './components/newsletter-form';
+@import './components/order-success';
+@import './components/recent-videos';
+@import './components/section-background';
+@import './components/section-header';
+@import './components/share-button';
+@import './components/social-share';
+@import './components/spinner';
+@import './components/static-page';
+@import './components/table';
+@import './components/template-404';
+@import './components/tile';
+@import './components/thank-you';
+@import './components/video';
+@import './components/video-tile';
+
+// Product
+@import './components/product/product';
+@import './components/product/product-drawer';
+@import './components/product/product-info';
+@import './components/product/product-option';
+
+
+// Utilities

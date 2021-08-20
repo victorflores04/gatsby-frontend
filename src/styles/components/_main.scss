@@ -1,0 +1,39 @@
+.main {
+    &__sections {
+      & > * + * {
+        margin-top: 60px;
+  
+        @include media-query(sm) {
+          margin-top: 90px;
+        }
+      }
+  
+      &--xspace {
+        margin-top: 50px;
+  
+        @include media-query(sm) {
+          margin-top: 80px;
+        }
+      }
+  
+      &--space {
+        margin-top: 16px;
+  
+        @include media-query(sm) {
+          margin-top: 40px;
+        }
+      }
+    }
+  
+    &__xspace {
+      margin-top: 50px;
+    }
+  
+    &__xxspace {
+      margin-top: 40px;
+  
+      @include media-query(sm) {
+        margin-top: 72px;
+      }
+    }
+  }

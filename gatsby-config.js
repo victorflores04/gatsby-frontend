@@ -4,12 +4,12 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Shopify Starter`,
-    description: `Gatsby & Shopify Starter for the WebDevEducation course.`,
-    author: `@tomphill`,
+    title: `Gatsby Shopify Store`,
+    description: `Gatsby & Shopify Starter for the WebLaParriche.`,
+    author: `@victorflores`,
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     `gatsby-optional-chaining`,
     {
       resolve: `gatsby-plugin-google-fonts`,

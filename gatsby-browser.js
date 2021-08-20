@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProductContextProvider } from './src/context/ProductContext';
 import { CartContextProvider } from './src/context/CartContext';
-import { GlobalStyle } from './src/components/globalStyles';
+import "./src/styles/styles.scss"
 
 export const wrapRootElement = ({ element }) => (
   <ProductContextProvider>
@@ -11,7 +11,7 @@ export const wrapRootElement = ({ element }) => (
 
 export const wrapPageElement = ({ element }) => (
   <>
-    <GlobalStyle />
+    <div/>
     {element}
   </>
 );
